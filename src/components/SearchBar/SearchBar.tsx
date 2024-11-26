@@ -1,5 +1,5 @@
 import {SearchBarProps} from '../../App.types';
-import css from './SearchBar.module.css'
+import css from './SearchBar.module.css';
 import iziToast from 'iziToast';
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
@@ -24,8 +24,6 @@ return (
     <input className={css.input}
     name = "title"
       type="text"
-    //   autocomplete="off"
-    //   autofocus
       placeholder="Search images and photos"
     />
     <button className={css.btn} type="submit">Search</button>
