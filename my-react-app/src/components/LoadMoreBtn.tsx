@@ -1,5 +1,5 @@
 import css from '../components/LoadMoreBtn.module.css'
-import LoadMoreBtnProps from '../App.types'
+import {LoadMoreBtnProps} from '../App.types'
 
 const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({onClick}) => {
 

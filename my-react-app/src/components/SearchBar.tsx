@@ -1,4 +1,4 @@
-import SearchBarProps from '../App.types';
+import {SearchBarProps} from '../App.types';
 import css from './SearchBar.module.css'
 import iziToast from 'iziToast';
 

@@ -7,7 +7,7 @@ interface ModalWindowProps {
     isClosed: () => void;
     src: string;
     alt_description: string;
-    onClick: () => void;
+    // onClick: () => void;
   }
   
 
@@ -18,7 +18,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
   isClosed,
   src,
   alt_description,
-  onClick,
+  // onClick,
 }) => {
   const customStyles = {
     content: {
@@ -41,7 +41,7 @@ const ModalWindow: React.FC<ModalWindowProps> = ({
         className={css.img}
         src={src}
         alt={alt_description}
-        onClick={onClick}
+        // onClick={onClick}
       />
     </Modal>
   );

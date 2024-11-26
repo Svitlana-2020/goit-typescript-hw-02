@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
-import { MouseEvent } from 'react';
-import ImageGallery from "./components/ImageGallery";
+// import { MouseEvent } from 'react';
+import ImageGallery from "./components/ImageGallery/ImageGallery";
 import { fetchPhotosByTitle } from "./photos-api";
 import { ApiResponse, Photo } from "./App.types";
 import LoadMoreBtn from './components/LoadMoreBtn'
-import ImageModal from "./components/ImageModal";
+import ImageModal from "./components/ImageModal/ImageModal";
 import Loader from "./components/Loader";
-import ErrorMessage from './components/ErroMessage'
+import ErrorMessage from './components/ErrorMessage/ErroMessage'
 // import iziToast from "izitoast";
 // import 'izitoast/dist/css/iziToast.min.css';
 
@@ -21,7 +21,7 @@ function App() {
   const [title, setTitle] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
-  const [modalPhoto, setModalPhoto] = useState<Photo | null>(null)
+  const [modalPhoto, setModalPhoto] = useState<ImageData | null>(null)
 
   useEffect(() => {
     if(!title) {
@@ -58,16 +58,16 @@ const getPhotos = async (): Promise<void> => {
       setPhotos([])
   }
   
-  const handleLoadMore = (evt: MouseEvent<HTMLButtonElement>) => {
+  const handleLoadMore = () => {
 
-    evt.preventDefault();
+    // evt.preventDefault();
     setLoadMore(true);
     setPage(page+1)
  }
 
  
- const isOpen = (photo: Photo): void => { 
-  setModalPhoto(photo);
+ const isOpen = (data: ImageData): void => {
+  setModalPhoto(data);
   setIsOpen(true);
 }
 
@@ -89,7 +89,11 @@ const loadMoreVisible = () => {
         {error && <ErrorMessage/>}
         {photos.length > 0 && <ImageGallery photos={photos} onImageClick={isOpen}  />}
         {loadMoreVisible() && <LoadMoreBtn onClick={handleLoadMore}/>}
-        {modalPhoto && <ImageModal isOpen={modalIsOpen} isClosed={isClosed} src={modalPhoto.urls.full} alt_description={modalPhoto.alt_description}/>}
+        {modalPhoto && <ImageModal 
+        isOpen={modalIsOpen} 
+        isClosed={isClosed} 
+        src={modalPhoto.urls.full} 
+        alt_description={modalPhoto.alt_description}/>}
       </div>
     </>
   );

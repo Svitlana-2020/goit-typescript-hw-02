@@ -23,7 +23,7 @@ export interface Photo {
 
   export interface ImageGalleryProps {
     photos: Photo[];
-    onImageClick: (data: { urls: { full: string }; alt_description: string }) => void;
+    onImageClick: (data:ImageData) => void;
   }
 
   export interface ImageCardProps {
@@ -31,5 +31,13 @@ export interface Photo {
     full: string;
     small: string;
     alt_description: string;
-    onImageClick: (data: { urls: { full: string }; alt_description: string }) => void;
+    onImageClick: (data: ImageData) => void;
+  }
+
+  export interface ImageData {
+    id?: string;
+    urls: {
+      full: string;
+    };
+    alt_description: string;
   }
