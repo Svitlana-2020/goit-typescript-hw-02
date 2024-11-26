@@ -1,6 +1,6 @@
 import {SearchBarProps} from '../../App.types';
-import css from './SearchBar.module.css';
-import iziToast from 'iziToast';
+import css from '../SearchBar/SearchBar.module.css';
+import iziToast from 'izitoast';
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
