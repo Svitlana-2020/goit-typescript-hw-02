@@ -28,6 +28,7 @@ function App() {
     if(!title) {
       return;
     }
+    console.log(loadMore, setTotalPhotos);
 const getPhotos = async (): Promise<void> => {
     try {
 
@@ -35,8 +36,7 @@ const getPhotos = async (): Promise<void> => {
       setError(false);
  
       const data: ApiResponse = await fetchPhotosByTitle(title, page);
-      setTotalPhotos(Math.ceil(data.total / 10));
-      console.log(totalPhotos);
+      console.log(Math.ceil(data.total / 10));
       setPhotos(prevPhotos => [...prevPhotos, ...data.results]);
       setLoadMore(false)
 
@@ -51,7 +51,7 @@ const getPhotos = async (): Promise<void> => {
     }
   }
   getPhotos()},
-  [page, title])
+  [page, title, loadMore])
 
   const handleSearch = (newTitle: string): void => {
       setTitle(newTitle)

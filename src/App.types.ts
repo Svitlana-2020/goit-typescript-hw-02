@@ -9,7 +9,7 @@ export interface Photo {
   
   export interface ApiResponse {
     total: number;
-    total_pages: number;
+    total_pages?: number;
     results: Photo[];
   }
 
