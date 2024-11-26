@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
-// import { MouseEvent } from 'react';
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import { fetchPhotosByTitle } from "./photos-api";
 import { ApiResponse, Photo } from "./App.types";
@@ -10,8 +9,7 @@ import ImageModal from "./components/ImageModal/ImageModal";
 import Loader from "./components/Loader/Loader";
 import ErrorMessage from './components/ErrorMessage/ErroMessage'
 import {ImageData} from './App.types'
-// import iziToast from "izitoast";
-// import 'izitoast/dist/css/iziToast.min.css';
+import 'izitoast/dist/css/iziToast.min.css';
 
 function App() {
   const [photos, setPhotos] = useState<Photo[]>([]);
