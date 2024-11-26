@@ -34,7 +34,7 @@ const getPhotos = async (): Promise<void> => {
       setError(false);
  
       const data: ApiResponse = await fetchPhotosByTitle(title, page);
-      console.log(Math.ceil(data.total / 10));
+      setTotalPhotos(Math.ceil(data.total / 10));
       setPhotos(prevPhotos => [...prevPhotos, ...data.results]);
       setLoadMore(false)
 
@@ -57,9 +57,7 @@ const getPhotos = async (): Promise<void> => {
       setPhotos([])
   }
   
-  const handleLoadMore = () => {
-
-    // evt.preventDefault();
+  const handleLoadMore = ():void => {
     setLoadMore(true);
     setPage(page+1)
  }
