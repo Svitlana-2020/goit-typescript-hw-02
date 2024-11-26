@@ -9,6 +9,7 @@ import LoadMoreBtn from './components/LoadMoreBtn'
 import ImageModal from "./components/ImageModal/ImageModal";
 import Loader from "./components/Loader";
 import ErrorMessage from './components/ErrorMessage/ErroMessage'
+import {ImageData} from './App.types'
 // import iziToast from "izitoast";
 // import 'izitoast/dist/css/iziToast.min.css';
 
