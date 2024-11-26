@@ -13,20 +13,20 @@ export interface Photo {
     results: Photo[];
   }
 
-  export default interface SearchBarProps {
+  export interface SearchBarProps {
     onSearch: (title: string) => void;
   }
 
-  export default interface LoadMoreBtnProps {
+  export interface LoadMoreBtnProps {
     onClick: () => void; 
   }
 
-  export default interface ImageGalleryProps {
+  export interface ImageGalleryProps {
     photos: Photo[];
     onImageClick: (data: { urls: { full: string }; alt_description: string }) => void;
   }
 
-  export default interface ImageCardProps {
+  export interface ImageCardProps {
     id: string;
     full: string;
     small: string;

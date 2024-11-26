@@ -1,6 +1,6 @@
 import ImageCard from '../components/ImageCard'
 import css from '../components/ImageGallery.module.css'
-import ImageGalleryProps from '../App.types'
+import {ImageGalleryProps} from '../App.types'
 
 const ImageGallery: React.FC<ImageGalleryProps>  = ( {photos, onImageClick} ) => {
     return (

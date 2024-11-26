@@ -6,7 +6,7 @@ import ImageGallery from "./components/ImageGallery";
 import { fetchPhotosByTitle } from "./photos-api";
 import { ApiResponse, Photo } from "./App.types";
 import LoadMoreBtn from './components/LoadMoreBtn'
-// import ImageModal from "./components/ImageModal";
+import ImageModal from "./components/ImageModal";
 import Loader from "./components/Loader";
 import ErrorMessage from './components/ErroMessage'
 // import iziToast from "izitoast";

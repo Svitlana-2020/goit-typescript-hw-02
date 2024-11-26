@@ -1,5 +1,5 @@
 import css from '../components/ImageCard.module.css'
-import ImageCardProps from '../App.types'
+import {ImageCardProps} from '../App.types'
 
 const ImageCard: React.FC<ImageCardProps> = ({id, full, small, alt_description, onImageClick }) => {
     return (
