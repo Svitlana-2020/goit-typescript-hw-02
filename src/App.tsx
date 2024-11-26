@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 // import { MouseEvent } from 'react';
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import { fetchPhotosByTitle } from "./photos-api";
 import { ApiResponse, Photo } from "./App.types";
-import LoadMoreBtn from './components/LoadMoreBtn'
+import LoadMoreBtn from './components/loadMoreBtn/LoadMoreBtn'
 import ImageModal from "./components/ImageModal/ImageModal";
-import Loader from "./components/Loader";
+import Loader from "./components/Loader/Loader";
 import ErrorMessage from './components/ErrorMessage/ErroMessage'
 import {ImageData} from './App.types'
 // import iziToast from "izitoast";
